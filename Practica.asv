@@ -1,0 +1,15 @@
+t1= -10:5;
+t2= -2:0.01:15;
+
+size(t1)
+size(t2)
+
+t1.*t1;
+
+%%help sinc
+
+%%sinc(t1)
+
+f = @(t) exp(-t).*t+exp(-t).*cos(2*t);
+u = @(t) t>=0;
+p = @(t) (t>=0) & (t<1);
