@@ -75,7 +75,50 @@ h_squared=@(t) (g(2*t+1)+g(-t+1)).*(g(2*t+1)+g(-t+1));
 E_h= quad(h_squared,-2,2)
 
 
-%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ejercicio 2
+% *2.* Resuelve el problema 1.2-2 usando las herramientas del paso anterior.
+% Primero definimos la funcion a trozos por medio de la funcion heaviside()
+
+t = [-10:0.001:10];
+x = @(t) -t.*(heaviside(t+4).*heaviside(-t))+t.*(heaviside(t).*heaviside(-t+2));
+plot(t,x(t));
+xlabel('t'); ylabel('x(t)'); 
+grid;
+axis([-8 8 -1 5]);
+%% 
+% Ya definida la funcion, simplemente la evaluamos en las diferentes transformaciones
+%% Transformacion a)
+
+plot(t,x(t-4));
+xlabel('t'); ylabel('x(t-4)'); 
+grid;
+axis([-8 8 -1 5]);
+%% Transformacion b)
+
+plot(t,x(t/1.5));
+xlabel('t'); ylabel('x(t/1.5)'); 
+grid;
+axis([-8 8 -1 5]);
+%% Transformacion c)
+
+plot(t,x(-t));
+xlabel('t'); ylabel('x(-t)'); 
+grid;
+axis([-8 8 -1 5]);
+%% Transformacion d)
+
+plot(t,x(2*t-4));
+xlabel('t'); ylabel('x(2*t-4)'); 
+grid;
+axis([-8 8 -1 5]);
+%% Transformacion e)
+
+plot(t,x(2-t));
+xlabel('t'); ylabel('x(2-t)'); 
+grid;
+axis([-8 8 -1 5]);
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 size(t1)
