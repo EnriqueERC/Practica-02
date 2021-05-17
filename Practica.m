@@ -162,17 +162,6 @@ k=10;
 for n=1:k
     s=cos(2*p*k*t);
     l=l+s;
-    plot(t,s,'m')
-    pause(1)
-    title('Grafica original ejercicio 4')
-    xlabel('Valores de x')
-    ylabel('Valores de f(x)')
-    grid on
-    ax = gca;
-    ax.XAxisLocation = 'origin';
-    ax.YAxisLocation = 'origin';
-    xlim([-1.2 1.2])
-    ylim([-1.2 1.2])
 end
 %%
     
@@ -207,5 +196,4 @@ title('Grafica cuarto rango')
 xlabel('Valores de x')
 ylabel('Valores de f(x)')
 grid on 
-axis ([-2, 2 -2.2 2.2])
-
+axis ([-1.9, 1.9 -2.2 2.2])
